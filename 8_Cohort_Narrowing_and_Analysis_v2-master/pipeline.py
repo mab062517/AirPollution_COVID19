@@ -1,0 +1,10 @@
+
+
+@transform_pandas(
+    Output(rid="ri.foundry.main.dataset.1875f16e-8584-43ea-bdb4-4cfb8e91128e")
+)
+from pyspark.sql.types import *
+def CBSA_obsc():
+    schema = StructType([StructField("CBSA_Name", StringType(), True), StructField("rnk", StringType(), True)])
+    return spark.createDataFrame([["Ann Arbor, MI","1"],["Baltimore-Columbia-Towson, MD","2"],["Birmingham-Hoover, AL","3"],["Bloomington, IN","4"],["Boston-Cambridge-Newton, MA-NH","5"],["Boulder, CO","6"],["Burlington-South Burlington, VT","7"],["Cedar Rapids, IA","8"],["Charleston-North Charleston, SC","9"],["Charleston, WV","10"],["Charlottesville, VA","11"],["Chicago-Naperville-Elgin, IL-IN-WI","12"],["Cincinnati, OH-KY-IN","13"],["Cleveland-Elyria, OH","14"],["Colorado Springs, CO","15"],["Columbus, IN","16"],["Columbus, OH","17"],["Davenport-Moline-Rock Island, IA-IL","18"],["Denver-Aurora-Lakewood, CO","19"],["Detroit-Warren-Dearborn, MI","20"],["Durham-Chapel Hill, NC","21"],["Elkhart-Goshen, IN","22"],["Evansville, IN-KY","23"],["Fort Collins, CO","24"],["Fort Wayne, IN","25"],["Gainesville, FL","26"],["Greeley, CO","27"],["Green Bay, WI","28"],["Greensboro-High Point, NC","29"],["Hickory-Lenoir-Morganton, NC","30"],["Indianapolis-Carmel-Anderson, IN","31"],["Iowa City, IA","32"],["Jackson, MS","33"],["Jacksonville, FL","34"],["Kokomo, IN","35"],["La Crosse-Onalaska, WI-MN","36"],["Lafayette-West Lafayette, IN","37"],["Lexington-Fayette, KY","38"],["Louisville/Jefferson County, KY-IN","39"],["Madison, WI","40"],["Milwaukee-Waukesha-West Allis, WI","41"],["Muncie, IN","42"],["New York-Newark-Jersey City, NY-NJ-PA","43"],["Niles-Benton Harbor, MI","44"],["Omaha-Council Bluffs, NE-IA","45"],["Phoenix-Mesa-Scottsdale, AZ","46"],["Providence-Warwick, RI-MA","47"],["Raleigh, NC","48"],["Roanoke, VA","49"],["Rochester, MN","50"],["Salt Lake City, UT","51"],["Seattle-Tacoma-Bellevue, WA","52"],["South Bend-Mishawaka, IN-MI","53"],["Terre Haute, IN","54"],["Trenton, NJ","55"],["Washington-Arlington-Alexandria, DC-VA-MD-WV","56"],["Winston-Salem, NC","57"]], schema=schema)
+
